@@ -13,8 +13,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-00-Coupling" />
-        <module name="Spring-01-Core-IoC" />
         <module name="Spring-02-Core-Wiring" />
+        <module name="Spring-01-Core-IoC" />
+        <module name="Spring-03-Core-DI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
