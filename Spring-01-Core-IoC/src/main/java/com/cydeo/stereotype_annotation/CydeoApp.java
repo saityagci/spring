@@ -5,7 +5,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class CydeoApp {
     public static void main(String[] args) {
-        ApplicationContext context=new AnnotationConfigApplicationContext(ConfigCourse.class);
+        ApplicationContext context=
+                new AnnotationConfigApplicationContext(ConfigCourse.class);
+        Java javaClass=context.getBean(Java.class);
+        javaClass.getTeachingHours();
+
 
     }
 }
