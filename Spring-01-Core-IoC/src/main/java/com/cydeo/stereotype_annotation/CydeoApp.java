@@ -7,8 +7,9 @@ public class CydeoApp {
     public static void main(String[] args) {
         ApplicationContext context=
                 new AnnotationConfigApplicationContext(ConfigCourse.class);
-        Java javaClass=context.getBean(Java.class);
-        javaClass.getTeachingHours();
+//        Java javaClass=context.getBean(Java.class);
+//        javaClass.getTeachingHours();
+        context.getBean(Java.class,Agile.class).getTeachingHours();
 
 
     }
