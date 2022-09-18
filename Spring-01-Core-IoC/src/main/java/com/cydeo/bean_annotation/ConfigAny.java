@@ -4,13 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ConfigApp {
+public class ConfigAny {
     @Bean
-    FullTimeMentor fullTimeMentor(){
-        return new FullTimeMentor();
+    String str(){
+        return "Developer";
     }
     @Bean
-    PartTimeMentor partTimeMentor(){
-        return new PartTimeMentor();
+    Integer number(){
+        return 44;
     }
 }
