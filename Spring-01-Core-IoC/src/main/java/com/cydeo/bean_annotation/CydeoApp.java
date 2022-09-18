@@ -10,7 +10,7 @@ public class CydeoApp {
                 new AnnotationConfigApplicationContext(ConfigApp.class, ConfigAny.class);
         FullTimeMentor ft=container.getBean(FullTimeMentor.class);
         ft.createAccount();
-      //  PartTimeMentor pt=container.getBean("p2",PartTimeMentor.class);
+      //  PartTimeMentor pt=container.getBean("p2",PartTimeMentor.class); dont need name if there primary key
         PartTimeMentor pt=container.getBean(PartTimeMentor.class);
         pt.createAccount();
         String str=container.getBean(String.class);
