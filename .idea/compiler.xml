@@ -12,6 +12,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spring-06-SpringBoot-Demo" />
         <module name="Spring-00-Coupling" />
         <module name="Spring-02-Core-Wiring" />
         <module name="Spring-04-Abstraction" />
@@ -23,5 +24,10 @@
     <bytecodeTargetLevel>
       <module name="Spring-01Core-IoC" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-06-SpringBoot-Demo" options="-parameters" />
+    </option>
   </component>
 </project>
