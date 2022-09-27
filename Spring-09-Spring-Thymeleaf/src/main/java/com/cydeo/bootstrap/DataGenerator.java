@@ -14,7 +14,13 @@ public class DataGenerator {
         new Student(new Faker().name().firstName(),new Faker().name().lastName(),
                 new Faker().address().state(), new Faker().number().numberBetween(20,50)),
         new Student(new Faker().name().firstName(),new Faker().name().lastName(),
-                new Faker().address().state(), new Faker().number().numberBetween(20,50))
+                new Faker().address().state(), new Faker().number().numberBetween(20,50)),
+        new Student(new Faker().name().firstName(),new Faker().name().lastName(),
+                new Faker().address().state(), new Faker().number().numberBetween(20,50)),
+                new Student(new Faker().name().firstName(),new Faker().name().lastName(),
+                        new Faker().address().state(), new Faker().number().numberBetween(20,50)),
+                new Student(new Faker().name().firstName(),new Faker().name().lastName(),
+                        new Faker().address().state(), new Faker().number().numberBetween(20,50))
         );
         return students;
 
