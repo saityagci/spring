@@ -22,7 +22,7 @@ public class MentorController {
 //        model.addAttribute("mentor3",mentor3);
 //        return "mentor/welcome";
 //    }
-    @RequestMapping("list")   // localhost:8080/mentor/list
+    @RequestMapping("/list")   // localhost:8080/mentor/list
     public String showTable(Model model) {
 
         List<Mentor> mentorList = new ArrayList<>();
