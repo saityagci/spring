@@ -20,7 +20,8 @@ public class Employee extends BaseEntity{
     private int salary;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL)
+   // @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     @JoinColumn(name="departmentId")
     private Department department;
 
