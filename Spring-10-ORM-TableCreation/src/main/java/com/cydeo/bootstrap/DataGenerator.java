@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class DataGenerator implements CommandLineRunner {
     CarRepository carRepository;
 
+
     public DataGenerator(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
@@ -18,6 +19,7 @@ public class DataGenerator implements CommandLineRunner {
         Car c1=new Car("Bmw","M5");
         Car c2=new Car("Honda","Civic");
         Car c3=new Car("Toyota","Corolla");
+
         carRepository.save(c1);
         carRepository.save(c2);
         carRepository.save(c3);
