@@ -24,6 +24,8 @@ public class Employee extends BaseEntity{
    // @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     @JoinColumn(name="departmentId")
     private Department department;
+    @OneToOne(cascade=CascadeType.ALL)
+    private Region region;
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
         this.firstName = firstName;
