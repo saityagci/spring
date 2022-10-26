@@ -26,6 +26,8 @@ public class Payment {
     @ManyToOne
     @JoinColumn(name = "merchant_id")
     private Merchant merchant;
+    @ManyToOne
+    private Customer customer;
 
     public Merchant getMerchant() {
         return merchant;
