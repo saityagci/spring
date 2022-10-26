@@ -5,12 +5,13 @@ import com.cydeo.model.Payment;
 import com.cydeo.model.PaymentDetail;
 import com.cydeo.repository.PaymentRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-public class DataGenerator  implements CommandLineRunner {
-    private final PaymentRepository paymentRepository;
+@Component
+public class DataGenerator implements CommandLineRunner {
+   private final PaymentRepository paymentRepository;
 
     public DataGenerator(PaymentRepository paymentRepository) {
         this.paymentRepository = paymentRepository;
@@ -29,6 +30,5 @@ public class DataGenerator  implements CommandLineRunner {
         payment2.setPaymentDetail(paymentDetail2);
         paymentRepository.save(payment1);
         paymentRepository.save(payment2);
-
     }
 }
