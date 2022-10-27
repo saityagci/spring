@@ -1,18 +1,23 @@
 package com.cydeo.boostrap;
 
 import com.cydeo.repository.DepartmentRepository;
+import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataGenerator implements CommandLineRunner {
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository) {
+    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
@@ -32,6 +37,13 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("findDistinctTop3ByDivisionContains:" + departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
 
         System.out.println("----------Department End----------");
+
+        System.out.println("----------Employee Start----------");
+        System.out.println(employeeRepository.findByEmailIsNull());
+
+        System.out.println("getEmployeeDetail: "+ employeeRepository.getEmployeeDetail());
+        System.out.println("getEmployeeSalary: $"+ employeeRepository.getEmployeeSalary());
+        System.out.println("----------Employee End----------");
 
 
     }
