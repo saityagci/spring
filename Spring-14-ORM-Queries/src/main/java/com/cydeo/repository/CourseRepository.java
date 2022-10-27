@@ -18,6 +18,6 @@ public interface CourseRepository extends JpaRepository<Course,Long> {
     //find all courses that start with the provided course name
     List<Course> findByNameStartingWith(String name);
     //find all courses by category and return a stream
-    Stream<Course>streamByCategory(String category);
+    Stream<Course> streamByCategory(String category);
 
 }

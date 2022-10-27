@@ -48,6 +48,8 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("getEmployeeSalary: $"+ employeeRepository.getEmployeeSalary());
         System.out.println(employeeRepository.getInfo());
         System.out.println(employeeRepository.getEmployeeDetail("saityagci@gmail.com"));
+        System.out.println("------------------------------------");
+        employeeRepository.getEmployeeSalaryBetween(100000,106000).forEach(System.out::println);
         System.out.println("----------Employee End----------");
 
         System.out.println("----------Course Start----------");
@@ -61,7 +63,7 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("------------------------------------------");
         System.out.println(courseRepository.findByNameStartingWith("Scalable"));
         System.out.println("------------------------------------------");
-        courseRepository.streamByCategory("Spring").forEach(System.out::println);
+        //courseRepository.streamByCategory("Spring").forEach(System.out::println);
         System.out.println("----------Course End----------");
 
 
