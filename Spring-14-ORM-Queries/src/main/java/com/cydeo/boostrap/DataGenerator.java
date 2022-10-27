@@ -35,7 +35,7 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("----------Region End----------");
 
         System.out.println("----------Department Start----------");
-
+        departmentRepository.retrieveDepartmentByDivision("Home").forEach(System.out::println);
         System.out.println("findByDepartment:" + departmentRepository.findByDepartment("Toys"));
         System.out.println("findByDivisionIs:" + departmentRepository.findByDivisionIs("Outdoors"));
         System.out.println("findDistinctTop3ByDivisionContains:" + departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
@@ -65,6 +65,7 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("------------------------------------------");
         //courseRepository.streamByCategory("Spring").forEach(System.out::println);
         System.out.println("----------Course End----------");
+
 
 
 
