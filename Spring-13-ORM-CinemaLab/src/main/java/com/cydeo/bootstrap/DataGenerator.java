@@ -22,6 +22,7 @@ public class DataGenerator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println(accountRepository.findByAgeBetween(11,23));
+        System.out.println(cinemaRepository.findAllBySponsoredNameOrName("aa","ssss"));
 
     }
 }
