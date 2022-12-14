@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/users")
 public class Consume_RestTemplate {
-    private final String URI="http://jsonplaceholder.typicode.com/users";
+    private final String URI="https://jsonplaceholder.typicode.com/users";
     private final RestTemplate restTemplate;
 
     public Consume_RestTemplate(RestTemplate restTemplate) {
