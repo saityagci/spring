@@ -31,7 +31,7 @@ public class Account extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private UserRole role = UserRole.USER;
 
-    @OneToOne(mappedBy = "account")
+    @OneToOne(mappedBy ="account")
     @JsonBackReference //is the back part of reference - it will be omitted from serialization
     private User user;
 
