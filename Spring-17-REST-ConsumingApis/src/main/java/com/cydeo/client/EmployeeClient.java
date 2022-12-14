@@ -1,7 +1,14 @@
 package com.cydeo.client;
 
+import com.cydeo.dto.Employee;
+import com.cydeo.dto.User;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(url = "",name = "EMPLOYEE-CLIENT")
+import java.util.List;
+
+@FeignClient(url = "https://dummyapi.io",name = "EMPLOYEE-CLIENT")
 public interface EmployeeClient {
+    @GetMapping("/data/v1/user?limit=10")
+    Employee getEmployee();
 }
