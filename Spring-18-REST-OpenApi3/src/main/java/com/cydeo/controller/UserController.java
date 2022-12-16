@@ -3,6 +3,9 @@ package com.cydeo.controller;
 import com.cydeo.entity.User;
 import com.cydeo.repository.UserRepository;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +24,12 @@ public class UserController {
     }
     @GetMapping("/users")
     @Operation(summary = "Read all users")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200",description = "Successfully retrieved users (OK)",
+                    content = {@Content(mediaType = "application/json")}),
+            @ApiResponse(responseCode = "400",description = "Something went wrong", content = @Content),
+            @ApiResponse(responseCode = "404",description = "Not found", content = @Content),
+    })
     public List<User> readAllUsers(){
         return userRepository.findAll();
     }
