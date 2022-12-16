@@ -2,6 +2,7 @@ package com.cydeo.controller;
 
 import com.cydeo.entity.Cinema;
 import com.cydeo.repository.CinemaRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ public class CinemaController {
         this.cinemaRepository = cinemaRepository;
     }
     @GetMapping("/cinemas")
+    @Operation(summary = "Read all cinemas")
     public List<Cinema> readAllCinemas(){
         return cinemaRepository.findAll();
     }
