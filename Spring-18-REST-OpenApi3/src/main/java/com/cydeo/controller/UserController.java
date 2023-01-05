@@ -28,7 +28,7 @@ public class UserController {
             @ApiResponse(responseCode = "200",description = "Successfully retrieved users (OK)",
                     content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode = "400",description = "Something went wrong", content = @Content),
-            @ApiResponse(responseCode = "404",description = "Not found", content = @Content),
+            @ApiResponse(responseCode = "404",description = "Not found", content = @Content)
     })
     public List<User> readAllUsers(){
         return userRepository.findAll();
