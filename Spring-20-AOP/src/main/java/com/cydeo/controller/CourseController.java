@@ -1,6 +1,7 @@
 package com.cydeo.controller;
 
 
+import com.cydeo.annotation.Loggable;
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.service.CourseService;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ public class CourseController {
     public CourseController(CourseService courseService) {
         this.courseService = courseService;
     }
-
+    @Loggable
     @GetMapping
     public List<CourseDTO> getAllCourses() {
 
@@ -30,7 +31,7 @@ public class CourseController {
         return list;
     }
 
-
+    @Loggable
     @GetMapping("/{id}")
     public CourseDTO getCourseById(@PathVariable("id") Long courseId) {
         return courseService.getCourseById(courseId);
@@ -41,7 +42,7 @@ public class CourseController {
         return courseService.getCoursesByCategory(category)       ;
     }
 
-
+    @Loggable
     @PostMapping
     public CourseDTO createCourse(@RequestBody CourseDTO course) {
         return courseService.createCourse(course);
@@ -51,7 +52,7 @@ public class CourseController {
     public void updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course) {
         courseService.updateCourse(courseId, course);
     }
-
+    @Loggable
     @DeleteMapping("/{id}")
     public void deleteCourseById(@PathVariable("id") Long courseId) {
         courseService.deleteCourseById(courseId);

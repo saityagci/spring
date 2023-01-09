@@ -16,6 +16,8 @@ public class LoggingAspect {
 
     Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
+//    ------------------------EXECUTION--------------------------------------
+
 //    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))")
 //    private void pointcut(){}
 
@@ -37,7 +39,7 @@ public class LoggingAspect {
 //        logger.info("Before (findById) : -> Method: {} - Arguments: {} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
 //    }
 
-//    //within
+//   ------------------------WITHIN--------------------------------------
 //    @Pointcut("within(com.cydeo.controller..*)")
 //    private void anyControllerOperation(){}
 //
@@ -51,7 +53,7 @@ public class LoggingAspect {
 //        logger.info("Before () -> Method : {} - Arguments : {} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
 //    }
 //
-
+//         ------------------------ANNOTATION--------------------------------------
     //    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
 //    private void anyDeleteCourseOperation(){}
 //
@@ -59,8 +61,8 @@ public class LoggingAspect {
 //    public void beforeControllerAdvice(JoinPoint joinPoint){
 //        logger.info("Before -> Method : {} - Arguments : {} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
 //    }
-    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
-    private void anyGetCourseOperation(){}
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
+//    private void anyGetCourseOperation(){}
 
 //    @AfterReturning(pointcut = "anyGetCourseOperation()", returning = "result")
 //    public void afterReturningControllerAdvice(JoinPoint joinPoint, Object result){
@@ -87,14 +89,16 @@ public class LoggingAspect {
 
     @Around("anyLoggableMethodOperation()")
     public Object anyLoggableMethodOperationAdvice(ProceedingJoinPoint proceedingJoinPoint){
-        logger.info("Before () -> Method : {} - Parameters: {}", proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
+        logger.info("Before () -> Method : {} - Parameters: {}",
+                proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
         Object results = null;
         try {
             results =proceedingJoinPoint.proceed();
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        logger.info("After -> Method: {} - Results: {}", proceedingJoinPoint.getSignature().toShortString(),results.toString());
+        logger.info("After -> Method: {} - Results: {}",
+                proceedingJoinPoint.getSignature().toShortString(),results.toString());
         return results;
     }
 
