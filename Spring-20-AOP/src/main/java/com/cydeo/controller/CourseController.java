@@ -15,7 +15,7 @@ public class CourseController {
 
     private final CourseService courseService;
 
-
+    Logger logger=LoggerFactory.getLogger(CourseController.class);
     public CourseController(CourseService courseService) {
         this.courseService = courseService;
     }
@@ -23,8 +23,9 @@ public class CourseController {
     @GetMapping
     public List<CourseDTO> getAllCourses() {
 
-
+      //  logger.info("Before -> Controller: {} - Method : {} ", "CourseController","getCourse()");
         List<CourseDTO> list = courseService.getCourses();
+      //  logger.info(" After -> Controller: {} - Method : {} - Output : {}", "CourseController","getCourse()",list.toString());
 
         return list;
     }
