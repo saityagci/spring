@@ -12,6 +12,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spring-21-unitTesting-JUnit5" />
         <module name="Spring-17-REST-ConsumingApis" />
         <module name="Spring-07-Spring-MVC-Controller" />
         <module name="Spring-00-Coupling" />
@@ -58,6 +59,7 @@
       <module name="Spring-19-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
       <module name="Spring-20-AOP" options="-parameters" />
+      <module name="Spring-21-unitTesting-JUnit5" options="" />
     </option>
   </component>
 </project>

@@ -32,5 +32,7 @@
     <file url="file://$PROJECT_DIR$/Spring-19-REST-Security-Keycloak-OrganizationsApp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-20-AOP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-20-AOP/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-21-unitTesting-JUnit5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-21-unitTesting-JUnit5/src/main/resources" charset="UTF-8" />
   </component>
 </project>
