@@ -14,7 +14,7 @@
     <name>Spring-22-UnitTesting-Mockito</name>
     <description>Spring-22-UnitTesting-Mockito</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
